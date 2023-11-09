@@ -1,0 +1,9 @@
+name: faoc
+channels:
+  - conda-forge
+dependencies:
+  - cartopy
+  - netcdf4
+  - numpy
+  - xarray
+  - matplotlib
