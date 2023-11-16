@@ -5,7 +5,7 @@
 
 
 data_final=`date -d "-2 month" +%Y%m%d`
-data_inicial=`date +%Y%m%d`
+data_inicial=`date +%Y-%m`
 
 echo $data_inicial
 echo $data_final

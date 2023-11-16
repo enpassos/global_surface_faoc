@@ -23,8 +23,8 @@ os.chdir(os.path.join(path,'downloads'))
 arq = [x for x in os.listdir() if x.endswith('.nc')]
 
 ds = xr.open_dataset(arq[0])
-ano = int(ds['time'].dt.year.astype(str))
-mes = int(ds['time'].dt.month.astype(str))
+ano = int(ds['time'][0].dt.year.astype(str))
+mes = int(ds['time'][0].dt.month.astype(str))
 
 date = datetime(ano, mes, 1)
 data_arq = date.strftime('%Y%m')
