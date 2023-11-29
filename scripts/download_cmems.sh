@@ -5,7 +5,7 @@ motu='/root/miniconda3/lib/python3.11/site-packages/motuclient/motuclient.py' # 
 #--------------------------------------------------------------
 # Parametros do usuario
 user='epassos'			# login no MyOcean
-pass='6Tilxl:Q0'		# senha
+pass='******'		# senha
 
 #--------------------------------------------------------------
 # Definição de Diretórios
