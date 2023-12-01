@@ -20,8 +20,7 @@ from netCDF4 import Dataset
 
 path = os.getcwd()
 os.chdir('../')
-os.mkdir('./Output')
-os.mkdir('./downloads')
+
 os.chdir(os.path.join(path,'downloads'))
 arq = [x for x in os.listdir() if x.endswith('.nc')]
 
