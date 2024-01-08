@@ -5,8 +5,11 @@ import datetime as dt
 a = os.getcwd()
 
 print('Diretorio: ',a)
-os.mkdir('./Output')
-os.mkdir('./downloads')
+try:
+    os.mkdir('./Output')
+    os.mkdir('./downloads')
+except:
+    pass
 
 hoje = dt.datetime.now()
 os.chdir('./scripts')
