@@ -9,7 +9,13 @@ try:
     os.mkdir('./Output')
     os.mkdir('./downloads')
 except:
-    pass
+    # pass
+    os.chdir('./Output')
+    [os.remove(arq) for arq in os.listdir()]
+    os.chdir('../downloads')
+    [os.remove(arq) for arq in os.listdir()]
+    os.chdir('../')
+
 
 hoje = dt.datetime.now()
 os.chdir('./scripts')
