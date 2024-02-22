@@ -1,0 +1,1 @@
+copernicusmarine subset --dataset-id cmems_mod_glo_phy-thetao_anfc_0.083deg_P1M-m --variable thetao --start-datetime 2023-12-07T00:00:00 --end-datetime 2023-12-21T23:59:59 --minimum-longitude -180 --maximum-longitude 180 --minimum-latitude -80 --maximum-latitude 80 --minimum-depth 0 --maximum-depth 1 --output-filename cmems_temp.nc
