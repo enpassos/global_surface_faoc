@@ -46,6 +46,8 @@ print('FAOC / UERJ: Oceanography Products: CMEMS in Robinson Projection')
 print('Author: Elisa Passos')
 print(' ')
 print('Figuras:')
+print(' ')
+print(' ')
 print('TSM + Vel superficial')
 
 # Open the file using the NetCDF4 library
@@ -94,8 +96,7 @@ skip = 10
 img2 = plt.streamplot(mlon[::skip,::skip], mlat[::skip,::skip], uvel[::skip,::skip], vvel[::skip,::skip], density=5.5, color='k', linewidth=0.7, arrowsize=0.5, arrowstyle='-|>', transform=ccrs.PlateCarree(), zorder=0)
 
 # Adding a colorbar
-plt.colorbar(img, label='Temperatura da Superfície do Mar (°C)', extend='both',\
-                          orientation='horizontal', pad=0.05, fraction=0.05, shrink=0.7)
+plt.colorbar(img, label='Temperatura da Superfície do Mar (°C)', extend='both', orientation='horizontal', pad=0.05, fraction=0.05, shrink=0.7)
 
 # Escrevendo os países
 txt01 = ax.annotate("Brasil", xy=(-50,-10), xycoords=ccrs.PlateCarree()._as_mpl_transform(ax), color='black', size=12, clip_on=True, annotation_clip=True, horizontalalignment='center', verticalalignment='center', transform=ccrs.PlateCarree(), zorder=2)
@@ -117,7 +118,8 @@ plt.savefig('../Output/cmems_tsm+vel_'+data_arq+'.png')
 # Author: Elisa Passos
 # Chl + Vel superficial
 #---------------------------------------------------------------------------------------------------------------------------
-
+print(' ')
+print(' ')
 print('Chl + Vel superficial')
 
 
@@ -156,8 +158,7 @@ img2 = ax.streamplot(mlon[::10,::10], mlat[::10,::10], uvel[::10,::10], vvel[::1
 
 
 # Adding a colorbar
-plt.colorbar(img, label='Concentração de Clorofila da Superfície do Mar ($mg \cdot m^{-3}$)', extend='both',\
-                          orientation='horizontal', pad=0.05, fraction=0.05, shrink=0.7)
+plt.colorbar(img, label='Concentração de Clorofila da Superfície do Mar ($mg \cdot m^{-3}$)', extend='both', orientation='horizontal', pad=0.05, fraction=0.05, shrink=0.7)
 
 # Escrevendo os países
 txt01 = ax.annotate("Brasil", xy=(-50,-10), xycoords=ccrs.PlateCarree()._as_mpl_transform(ax), color='black', size=12, clip_on=True, annotation_clip=True, horizontalalignment='center', verticalalignment='center', transform=ccrs.PlateCarree(), zorder=115)
@@ -178,6 +179,8 @@ plt.savefig('../Output/cmems_chl+vel_'+data_arq+'.png', transparent=False)
 # Author: Elisa Passos
 # O2 + Vel superficial
 #---------------------------------------------------------------------------------------------------------------------------
+print(' ')
+print(' ')
 print('O2  + Vel superficial')
 
 # Extract the O2
@@ -231,6 +234,8 @@ plt.savefig('../Output/cmems_o2+vel_'+data_arq+'.png')
 # Author: Elisa Passos
 # NO3 + Vel superficial
 #---------------------------------------------------------------------------------------------------------------------------
+print(' ')
+print(' ')
 print('NO3 + Vel superficial')
 
 # Extract the NO3
@@ -262,8 +267,7 @@ img = plt.pcolor(mlon_bio[::2,::2], mlat_bio[::2,::2], data[::2,::2], vmin=0, vm
 img2 = ax.streamplot(mlon[::10,::10], mlat[::10,::10], uvel[::10,::10], vvel[::10,::10], density=5.5, color='k', linewidth=0.7, arrowsize=0.5, arrowstyle='-|>', transform=ccrs.PlateCarree())
 
 # Adding a colorbar
-plt.colorbar(img, label='Nitrato da Superfície do Mar ($\mu mol \cdot L^{-1}$)', extend='max',\
-                          orientation='horizontal', pad=0.05, fraction=0.05, shrink=0.7)
+plt.colorbar(img, label='Nitrato da Superfície do Mar ($\mu mol \cdot L^{-1}$)', extend='max', orientation='horizontal', pad=0.05, fraction=0.05, shrink=0.7)
 
 # Escrevendo os países
 txt01 = ax.annotate("Brasil", xy=(-50,-10), xycoords=ccrs.PlateCarree()._as_mpl_transform(ax), color='black', size=12, clip_on=True, annotation_clip=True, horizontalalignment='center', verticalalignment='center', transform=ccrs.PlateCarree(), zorder=115)
@@ -285,6 +289,8 @@ plt.savefig('../Output/cmems_no3+vel_'+data_arq+'.png')
 # Author: Elisa Passos
 # pH + Vel superficial
 #---------------------------------------------------------------------------------------------------------------------------
+print(' ')
+print(' ')
 print('pH  + Vel superficial')
 
 # Extract the pH
@@ -323,8 +329,7 @@ img2 = ax.streamplot(mlon[::10,::10], mlat[::10,::10], uvel[::10,::10], vvel[::1
 
 # Adding a colorbar
 
-plt.colorbar(img, label='pH da Superfície do Mar', ticks=bounds, extend='neither',\
-             orientation='horizontal', pad=0.05, fraction=0.05, shrink=0.7)
+plt.colorbar(img, label='pH da Superfície do Mar', ticks=bounds, extend='neither', orientation='horizontal', pad=0.05, fraction=0.05, shrink=0.7)
 
 # Escrevendo os países
 txt01 = ax.annotate("Brasil", xy=(-50,-10), xycoords=ccrs.PlateCarree()._as_mpl_transform(ax), color='black', size=12, clip_on=True, annotation_clip=True, horizontalalignment='center', verticalalignment='center', transform=ccrs.PlateCarree(), zorder=115)
@@ -344,6 +349,8 @@ plt.savefig('../Output/cmems_ph+vel_'+data_arq+'.png')
 # Author: Elisa Passos
 # Si + Vel superficial
 # --------------------------------------------------------------------------------------------------------------------------
+print(' ')
+print(' ')
 print('Si  + Vel superficial')
 
 # Extract the Si
@@ -375,8 +382,7 @@ img = plt.pcolor(mlon_bio[::2,::2], mlat_bio[::2,::2], data[::2,::2], vmin=0, vm
 img2 = ax.streamplot(mlon[::10,::10], mlat[::10,::10], uvel[::10,::10], vvel[::10,::10], density=5.5, color='w', linewidth=0.7, arrowsize=0.5, arrowstyle='-|>', transform=ccrs.PlateCarree())
 
 # Adding a colorbar
-plt.colorbar(img, label='Silicato da Superfície do Mar ($\mu mol \cdot L^{-1}$)', extend='max',\
-                          orientation='horizontal', pad=0.05, fraction=0.05, shrink=0.7)
+plt.colorbar(img, label='Silicato da Superfície do Mar ($\mu mol \cdot L^{-1}$)', extend='max', orientation='horizontal', pad=0.05, fraction=0.05, shrink=0.7)
 
 # Escrevendo os países
 txt01 = ax.annotate("Brasil", xy=(-50,-10), xycoords=ccrs.PlateCarree()._as_mpl_transform(ax), color='black', size=12, clip_on=True, annotation_clip=True, horizontalalignment='center', verticalalignment='center', transform=ccrs.PlateCarree(), zorder=115)
@@ -397,6 +403,8 @@ plt.savefig('../Output/cmems_si+vel_'+data_arq+'.png')
 # Author: Elisa Passos
 # PO4 + Vel superficial
 #---------------------------------------------------------------------------------------------------------------------------
+print(' ')
+print(' ')
 print('PO4 + Vel superficial')
 
 # Extract the PO4
@@ -428,8 +436,7 @@ img = plt.pcolor(mlon_bio[::2,::2], mlat_bio[::2,::2], data[::2,::2], vmin=0, vm
 img2 = ax.streamplot(mlon[::10,::10], mlat[::10,::10], uvel[::10,::10], vvel[::10,::10], density=5.5, color='k', linewidth=0.7, arrowsize=0.5, arrowstyle='-|>', transform=ccrs.PlateCarree())
 
 # Adding a colorbar
-plt.colorbar(img, label='Fosfato da Superfície do Mar ($\mu mol \cdot L^{-1}$)', extend='max',\
-                          orientation='horizontal', pad=0.05, fraction=0.05, shrink=0.7)
+plt.colorbar(img, label='Fosfato da Superfície do Mar ($\mu mol \cdot L^{-1}$)', extend='max', orientation='horizontal', pad=0.05, fraction=0.05, shrink=0.7)
 
 # Escrevendo os países
 txt01 = ax.annotate("Brasil", xy=(-50,-10), xycoords=ccrs.PlateCarree()._as_mpl_transform(ax), color='black', size=12, clip_on=True, annotation_clip=True, horizontalalignment='center', verticalalignment='center', transform=ccrs.PlateCarree(), zorder=115)
@@ -450,6 +457,8 @@ plt.savefig('../Output/cmems_po4+vel_'+data_arq+'.png')
 # Author: Elisa Passos
 # Fe + Vel superficial
 #---------------------------------------------------------------------------------------------------------------------------
+print(' ')
+print(' ')
 print('Fe  + Vel superficial')
 
 # Extract the Fe
@@ -482,8 +491,7 @@ img = plt.pcolor(mlon_bio[::2,::2], mlat_bio[::2,::2], data[::2,::2], vmin=0, vm
 img2 = ax.streamplot(mlon[::10,::10], mlat[::10,::10], uvel[::10,::10], vvel[::10,::10], density=5.5, color='k', linewidth=0.7, arrowsize=0.5, arrowstyle='-|>', transform=ccrs.PlateCarree())
 
 # Adding a colorbar
-plt.colorbar(img, label='Ferro dissolvido da Superfície do Mar ($nmol \cdot L^{-1}$)', extend='max',\
-                          orientation='horizontal', pad=0.05, fraction=0.05, shrink=0.7)
+plt.colorbar(img, label='Ferro dissolvido da Superfície do Mar ($nmol \cdot L^{-1}$)', extend='max', orientation='horizontal', pad=0.05, fraction=0.05, shrink=0.7)
 
 # Escrevendo os países
 txt01 = ax.annotate("Brasil", xy=(-50,-10), xycoords=ccrs.PlateCarree()._as_mpl_transform(ax), color='black', size=12, clip_on=True, annotation_clip=True, horizontalalignment='center', verticalalignment='center', transform=ccrs.PlateCarree(), zorder=115)
